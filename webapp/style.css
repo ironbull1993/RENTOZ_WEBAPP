@@ -1,0 +1,82 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  font-size: 120%;
+  background: #F8F8FF;
+  background-image: url(libr-bg1.jpg);
+}
+
+.header {
+  width: 65%;
+  margin: 20px auto 0px;
+  color: white;
+  background: rgb(248, 136, 7);
+  text-align: center;
+  border: 1px solid #B0C4DE;
+  border-bottom: none;
+  border-radius: 10px 10px 0px 0px;
+  padding: 20px;
+  -webkit-border-radius: 10px 10px 0px 0px;
+  -moz-border-radius: 10px 10px 0px 0px;
+  -ms-border-radius: 10px 10px 0px 0px;
+  -o-border-radius: 10px 10px 0px 0px;
+}
+form, .input-group {
+  width: 65%;
+  margin: 20px auto 0px;
+  padding: 20px;
+  background: white;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.input-group input {
+  margin: 5px 10px 5px 0;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  
+}
+
+.pass-stlye{
+    display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+.pass-stlye label {
+  margin: 5px;
+}
+
+.birth-month{
+   display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+.birth-month label{
+  margin: 5px;
+}
+
+.gender-country{
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+.gender-country label{
+  margin: 5px;
+}
+
+.pdw1{
+  text-align: left;
+}
+
+.pdw2{float: right;
+  text-align: left;
+}
+
+
+
+

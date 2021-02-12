@@ -1,0 +1,134 @@
+<html>
+<head>
+    
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+
+
+ <script>  
+ function validate(){
+        var y = document.forms["regform"]["passwrd"].value;
+        var z = document.forms["regform"]["password1"].value;
+        
+        if (y !== z) {
+          alert("Please check your entries, something is wrong. (password doesn't match!)");
+          return false;
+      }
+    
+  
+    var a = document.forms["regform"]["birth_yr"].value;
+    console.log(typeof a);
+    if(Number.isInteger(+a)){if(a >2005 || a <1995){alert("Please check your entries,something is wrong. (year should be from 1995 to 2005)");
+   return false;}}
+      
+    else{alert("Please check your entries,something is wrong. (year must be numbers only and no decimals!)");return false;
+    }
+    
+    
+  
+     var c =document.forms["regform"]["gender"].value;
+      if(c===""){alert("Please check your entries,something is wrong. (select your gender)");
+      return false;}
+
+  
+     var b =document.forms["regform"]["birth_month"].value;
+      if(b===""){alert("Please check your entries,something is wrong. (select your birth month)");
+      return false;}
+
+  
+     var d =document.forms["regform"]["country"].value;
+      if(d===""){alert("Please check your entries,something is wrong. (select your country)");
+      return false;}
+  
+
+  
+    var regName = /^[a-zA-Z]+[a-zA-Z]+( [a-zA-Z]+){2}$/ ;
+    var namee = document.getElementById('name').value;
+    if(!regName.test(namee)){
+        alert('Please check your entries,something is wrong. (Please check or enter your full name!.)');
+        
+        return false;
+    }else{
+        
+        return true;
+    }
+}
+
+function clearall(){
+var q = document.getElementById('name').value='';
+var w = document.getElementById('passwd').value='';
+var r = document.getElementById('year').value='';
+var t = document.getElementById('passwd1').value='';
+var u = document.getElementById('gender').value='';
+var i = document.getElementById('country').value='';
+var o = document.getElementById('month').value='';
+ return true;
+
+}
+
+function show(){
+var psd = document.getElementById('passwd');
+if(psd.type ==='password'){psd.type= 'text';}
+else{psd.type ='password';}
+var psd1=document.getElementById('passwd1');
+if(psd1.type==='password'){psd1.type='text';}
+else{psd1.type='password';}
+}
+
+      </script>
+ <body>  
+ <div class="header">
+<h1><b>REGISTRATION FORM</b></h1></div>
+
+<div class="input-group">
+<form name="regform" action="reg.php" onsubmit="return validate()"  method="POST">
+
+Full Name: &nbsp;&nbsp;<input type="text" id="name" maxlength="30" style="width: 455px;"  name="fullname" required>
+<br><br>
+Password: &nbsp;&nbsp; <input type="password" id="passwd" style="width: 170px;" name="passwrd" minlength="8" maxlength="15" required>&nbsp;&nbsp;&nbsp;&nbsp;     Confirm: <input type="password" style="width: 170px;" minlength="8" maxlength="15" id="passwd1" name="password1" required> <br><div id="showpd"><input type ="checkbox"  onclick="show()" ><font size='2'>show password</font></input></div>
+
+BirthMonth:&nbsp;<select name="birth_month" class="monthscroll" onmousedown="if(this.options.length>6){this.size=6;}" onchange='this.size=0;' onblur="this.size=0;" id="month" style="width: 170px;" >
+<option value="">not selected</option>    
+<option value="january">january</option>    
+<option value="february">february</option>    
+<option value="march">march</option> 
+<option value="april">april</option> 
+<option value="may">may</option> 
+<option value="june">june</option> 
+<option value="july">july</option>       
+<option value="august">august</option> 
+<option value="september">september</option> 
+<option value="october">october</option> 
+<option value="november">november</option> 
+<option value="december">december</option> 
+</select> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+BirthYear:  <input type="text" id="year" maxlength="6" style="width: 155px;" name="birth_yr" required><br><br>
+Gender:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<select name="gender" id="gender" style="width: 170px;">
+<option value="">not selected</option>    
+<option value="male">male</option>    
+<option value="female">female</option>    
+</select>
+&nbsp;&nbsp;&nbsp;&nbsp;
+  Country: <select name="country" id="country" style="width: 168px;">
+<option value="">not selected</option>    
+<option value="Tanzania">Tanzania</option>    
+<option value="Kenya">Kenya</option>    
+<option value="Uganda">Uganda</option>    
+   <option value="Burundi">Burundi</option> 
+   <option value="Rwanda">Rwanda</option> 
+   <option value="SouthSudan">South Sudan</option> 
+</select><br><br>
+
+<div class="btn">
+<button type="submit" name="regist" value="submit">SAVE</button>&nbsp;&nbsp;&nbsp;&nbsp;
+<button  name="reset" onclick="clearall();" >RESET</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="close.html" ><button type="button" name="exit" value="" >EXIT</button></a></div>
+</form>
+</div>
+
+
+ </body>
+</html>

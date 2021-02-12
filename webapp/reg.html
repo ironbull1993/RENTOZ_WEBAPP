@@ -1,0 +1,56 @@
+<?php
+include "conn.php";
+$age= 2017-$_POST['birth_yr'];
+$sql="INSERT INTO coict_student (fullname,password,birth_yr,birth_month,gender,country,age)
+VALUES
+('".$_POST['fullname']."','".$_POST['password']."','".$_POST['birth_yr']."','".$_POST['birth_month']."','".$_POST['gender']."','".$_POST['country']."','$age')";
+
+if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully";
+  } else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+  }
+  
+  $conn->close();
+
+?>
+
+
+<html>
+<h1><b>REGISTRATION FORM</b></h1>
+<form action="reg.php" method="POST">
+
+Full Name: <input type="text" placeholder="enter full name" name="fullname">
+<br>
+Password:  <input type="password" name="password">      Confirm: <input type="password" name="password"> <br>
+
+BirthMonth:<select name="birth_month">
+<option value="not_selected">not selected</option>    
+<option value="january">january</option>    
+<option value="february">february</option>    
+<option value="march">march</option>       
+</select>  
+
+BirthYear:  <input type="text" name="birth_yr"><br>
+Gender:
+<select name="gender">
+<option value="not_selected">not selected</option>    
+<option value="male">male</option>    
+<option value="female">female</option>    
+   
+   
+</select>
+  Country: <select name="country">
+<option value="not_selected">not selected</option>    
+<option value="Tanzania">Tanzania</option>    
+<option value="Kenya">Kenya</option>    
+<option value="Uganda">Uganda</option>    
+   
+</select><br>
+
+<button type="submit" name="regist" value="submit">SAVE</button>
+<button type="submit" name="reset" value="submit">RESET</button>
+<button type="submit" name="exit" value="submit">EXIT</button>
+</form>
+
+</html>

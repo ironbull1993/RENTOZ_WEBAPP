@@ -1,0 +1,70 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    
+  }
+  body {
+    font-size: 120%;
+    background: #F8F8FF;
+    background-image: url(libr-bg1.jpg);
+  }
+.header {
+    width: 50%;
+    margin: auto ;
+    color: rgb(163, 13, 106);
+    background: rgb(253, 251, 251);
+    text-align: center;
+    border: 1px hidden #f8fafc;
+    
+    border-bottom:none;
+    border-radius: 10px 10px 0px 0px;
+    padding: 20px;
+    -webkit-border-radius: 10px 10px 0px 0px;
+    -moz-border-radius: 10px 10px 0px 0px;
+    -ms-border-radius: 10px 10px 0px 0px;
+    -o-border-radius: 10px 10px 0px 0px;
+}
+
+.input-group{
+     width: 50%;
+     margin: auto;
+     padding: 20px;
+     background: rgb(252, 249, 251);
+     border: hidden;
+     border-radius: 0px 0px 10px 10px;
+     -webkit-border-radius: 0px 0px 10px 10px;
+     -moz-border-radius: 0px 0px 10px 10px;
+     -ms-border-radius: 0px 0px 10px 10px;
+     -o-border-radius: 0px 0px 10px 10px;
+}  
+
+.btn{
+     width: 50%;
+     margin: auto;
+     padding: 10px;
+     background: rgb(253, 253, 253);
+     border: 1px hidden ;
+     border-radius: 0px 0px 10px 10px;
+     -webkit-border-radius: 0px 0px 10px 10px;
+     -moz-border-radius: 0px 0px 10px 10px;
+     -ms-border-radius: 0px 0px 10px 10px;
+     -o-border-radius: 0px 0px 10px 10px;
+}
+
+.monthscroll{
+  position:absolute;
+  z-index:1;
+}  
+#showpd{
+  width: 50%;
+  margin: auto;
+  text-align: right;
+  padding: 10px;
+  background: rgb(253, 252, 253);
+  border: 1px hidden ;
+  border-radius: 0px 0px 10px 10px;
+  -webkit-border-radius: 0px 0px 10px 10px;
+  -moz-border-radius: 0px 0px 10px 10px;
+  -ms-border-radius: 0px 0px 10px 10px;
+  -o-border-radius: 0px 0px 10px 10px;
+}
