@@ -260,6 +260,33 @@ Class Action {
 		if($save)
 			return 1;
 	}
+
+	function save_house1(){
+		extract($_POST);
+		$data = " house_no = '$house_no' ";
+		$data .= ", electricity = '$description1' ";
+		$data .= ", e_price = '$price1' ";
+		$data .= ", furniture = '$description2' ";
+		$data .= ", f_price = '$price2' ";
+		$data .= ", drainage = '$description3' ";
+		$data .= ", d_price = '$price3' ";
+		//$chk = $this->db->query("SELECT * FROM houses where house_no = '$house_no' ")->num_rows;
+		//if($chk > 0 ){
+			//return 2;
+			//exit;
+		//}
+			//if(empty($id)){
+				$save = $this->db->query("INSERT INTO maintains set $data");
+			//}else{
+			//	$save = $this->db->query("UPDATE houses set $data where id = $id");
+		//	}
+		if($save)
+			return 1;
+	}
+
+
+
+
 	function delete_house(){
 		extract($_POST);
 		$delete = $this->db->query("DELETE FROM houses where id = ".$id);
@@ -267,6 +294,16 @@ Class Action {
 			return 1;
 		}
 	}
+
+	function delete_house1(){
+		extract($_POST);
+		$delete = $this->db->query("DELETE FROM maintains where id = ".$id);
+		if($delete){
+			return 1;
+		}
+	}
+
+
 	function save_tenant(){
 		extract($_POST);
 		$data = " firstname = '$firstname' ";

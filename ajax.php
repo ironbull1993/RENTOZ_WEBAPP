@@ -64,11 +64,25 @@ if($action == "save_house"){
 	if($save)
 		echo $save;
 }
+
+if($action == "save_house1"){
+	$save = $crud->save_house1();
+	if($save)
+		echo $save;
+}
+
 if($action == "delete_house"){
 	$save = $crud->delete_house();
 	if($save)
 		echo $save;
 }
+
+if($action == "delete_house1"){
+	$save = $crud->delete_house1();
+	if($save)
+		echo $save;
+}
+
 
 if($action == "save_tenant"){
 	$save = $crud->save_tenant();
